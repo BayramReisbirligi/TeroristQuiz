@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terrorist Quiz</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script defer src="https://analytics.eu.umami.is/script.js" data-website-id="c21f2db2-88e9-4f47-931e-106a38134e74"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="stars-background"></div>
+  <div class="main">
+    <div class="mainTitle">
+      <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 245.000000 36.000000" height="36.000000pt" width="150.000000pt" xmlns="http://www.w3.org/2000/svg" version="1.0">
+        <g stroke="none" fill="#ffffff" transform="translate(0.000000,36.000000) scale(0.100000,-0.100000)">
+          <path d="M2195 350 c-3 -5 2 -24 11 -42 9 -18 17 -57 18 -87 l1 -53 -50 -14
+          c-61 -16 -65 -16 -65 -4 0 5 16 12 35 16 19 3 35 11 35 16 0 10 -27 6 -64 -8
+          -9 -3 -16 -1 -16 5 0 6 7 11 15 11 28 0 87 29 80 40 -4 6 -19 5 -42 -5 -19 -8
+          -46 -15 -59 -15 -27 0 -40 -16 -27 -33 5 -7 10 -25 12 -42 4 -42 19 -47 65
+          -21 35 20 56 23 141 24 107 2 155 8 155 22 0 5 -26 26 -57 46 -69 43 -120 89
+          -139 127 -15 27 -38 35 -49 17z m86 -106 c7 -8 29 -24 49 -34 20 -10 42 -26
+          49 -34 12 -14 9 -16 -22 -16 -19 0 -44 -3 -54 -6 -11 -3 -8 1 7 11 l25 16 -37
+          -5 -36 -4 -4 44 c-3 47 2 53 23 28z"></path>
+        </g>
+      </svg>
+      <span>TERRORIST QUIZ</span>
+    </div>
+
+    <div class="quiz-wrapper">
+      <div class="corner1"></div>
+      <div class="corner2"></div>
+      <div class="corner3"></div>
+      <div class="corner4"></div>
+      
+      <div class="quiz-card">
+        <div class="topHeadingDiv">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 50 60" height="65" width="55" style="padding-left: 0.75em; padding-right: 0.45em;">
+            <circle stroke-width="3" stroke="#D9D9D9" r="23.5" cy="30" cx="25"></circle>
+            <path fill="white" d="M20.25 34.5C20.15 34.2333 20.0333 33.8667 19.9 33.4C19.8 32.9 19.75 32.3667 19.75 31.8C19.75 30.4667 20.15 29.4667 20.95 28.8C21.75 28.1333 23.0167 27.8 24.75 27.8H27.85C28.9167 27.8 29.65 27.55 30.05 27.05C30.4833 26.55 30.7 25.7833 30.7 24.75V22.45C30.6667 21.5833 30.4333 20.95 30 20.55C29.5667 20.15 28.8167 19.95 27.75 19.95H23.5C21.4667 19.95 19.7333 20.0667 18.3 20.3C16.8667 20.5333 15.7667 20.75 15 20.95L14 16.6C14.7667 16.1333 15.9667 15.7667 17.6 15.5C19.2333 15.2333 21.3667 15.1 24 15.1H28.65C31.6833 15.1 33.8833 15.7833 35.25 17.15C36.6167 18.5167 37.3 20.2333 37.3 22.3V25.45C37.3 27.5833 36.65 29.2333 35.35 30.4C34.0833 31.5667 32.3667 32.15 30.2 32.15H26.45C25.5833 32.15 24.9833 32.3333 24.65 32.7C24.3167 33.0667 24.0833 33.6667 23.95 34.5H20.25ZM22.15 45C20.9167 45 20.0167 44.75 19.45 44.25C18.8833 43.75 18.6 42.9167 18.6 41.75C18.6 40.55 18.8667 39.7167 19.4 39.25C19.9667 38.75 20.8833 38.5 22.15 38.5C23.4167 38.5 24.3333 38.75 24.9 39.25C25.4667 39.7167 25.75 40.55 25.75 41.75C25.75 42.8833 25.4667 43.7167 24.9 44.25C24.3333 44.75 23.4167 45 22.15 45Z"></path>
+          </svg>
+          <div class="quiz-title">Hangi Örgüt?</div>
+        </div>
+        
+        <div class="middleDiv">
+          <div id="quiz-container" class="image-container">
+          </div>
+        </div>
+        
+        <div class="bottomDiv">
+          <div id="answer-buttons" class="answer-buttons">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-section">
+      <div class="scoreboard-wrapper">
+        <div class="corner1"></div>
+        <div class="corner2"></div>
+        <div class="corner3"></div>
+        <div class="corner4"></div>
+        
+        <div class="scoreboard-card">
+          <div id="scoreboard" class="scoreboard">Doğru: 0 | Yanlış: 0</div>
+          <button id="reset-button" class="control-button">
+            <span>Skoru Sıfırla</span>
+            <div class="cornerBtn1"></div>
+            <div class="cornerBtn2"></div>
+            <div class="cornerBtn3"></div>
+            <div class="cornerBtn4"></div>
+          </button>
+        </div>
+      </div>
+
+      <div class="settings-wrapper">
+        <div class="corner1"></div>
+        <div class="corner2"></div>
+        <div class="corner3"></div>
+        <div class="corner4"></div>
+        
+        <div class="settings-card">
+          <h3>Sivilleri Ekle</h3>
+          <label class="switch">
+            <input type="checkbox" id="include-civilians-toggle" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-wrapper">
+      <div class="corner1"></div>
+      <div class="corner2"></div>
+      <div class="corner3"></div>
+      <div class="corner4"></div>
+      
+      <div class="about-card">
+        <details class="about">
+          <summary>Hakkında</summary>
+          <div class="about-content">
+            <p>Veriler herkese açık olarak yayınlanan <a href="https://www.terorarananlar.pol.tr/tarananlar/" target="_blank">T.C. İçişleri Bakanlığı Terör Arananlar</a> listesinden alınmaktadır.</p>
+            <p>Sivillerin fotoğrafları yapay zeka ile insan fotoğrafı üreten <a target="_blank" href="https://thispersondoesnotexist.com">https://thispersondoesnotexist.com</a> adresinden alınmaktadır.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
